@@ -3,7 +3,12 @@ import {getDetailProduct} from "@/utils/fetchApi";
 import {DetailProductContent} from "@/components/detailProduct";
 import {usd} from "@/utils/helper";
 import {ProductDetail} from "@/types/global.type";
+import type {Metadata} from "next";
 
+export const metadata: Metadata = {
+    title: "Product",
+    description: "List Products",
+};
 
 export default async function DetailProduct({ params }: { params: { slug: string } }) {
     const data : ProductDetail = await  getDetailProduct(params?.slug)

@@ -13,7 +13,7 @@ export const SearchComponent = ({query, setQuery}: Props) =>{
                 onChange={(e) =>{
                     setQuery(e.target.value)
                 }}
-                placeholder="Cari produk atau kategori..."
+                placeholder="search product here..."
                 className="block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
         </div>

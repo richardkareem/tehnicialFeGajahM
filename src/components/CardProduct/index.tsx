@@ -26,7 +26,9 @@ export const CardProduct = ({ title, description, price, images, id }: Props) =>
             <Slider {...settings}>
                 {images.map((image:string, index:number) => (
                     <div key={index}>
-                        <Image quality={50} width={150} height={150} className="w-full h-48 object-cover overflow-hidden" src={image} alt={`Image ${index + 1}`}/>
+                        <Image
+                            priority
+                            quality={10} width={150} height={150} className="w-full h-48 object-cover overflow-hidden" src={image} alt={`Image ${index + 1}`}/>
                     </div>
                 ))}
             </Slider>
